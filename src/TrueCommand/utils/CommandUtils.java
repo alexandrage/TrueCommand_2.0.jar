@@ -13,9 +13,7 @@ public class CommandUtils {
 
 	static {
 		try {
-			Field field = Bukkit.getServer().getClass().getDeclaredField("commandMap");
-			field.setAccessible(true);
-			map = (CommandMap) field.get(Bukkit.getServer());
+			map = Bukkit.getServer().getCommandMap();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
