@@ -11,11 +11,7 @@ public class CommandUtils {
 	private static Map<String, String> repl;
 
 	static {
-		try {
-			map = Bukkit.getServer().getCommandMap();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		map = Bukkit.getServer().getCommandMap();
 		(repl = new HashMap<String, String>()).put("й", "q");
 		repl.put("ц", "w");
 		repl.put("у", "e");
